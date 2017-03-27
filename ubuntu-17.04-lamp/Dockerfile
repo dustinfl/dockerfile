@@ -10,7 +10,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Custom apache2 configuration
-COPY conf.d/* /etc/apache2/conf-enabled/
+# COPY conf.d/* /etc/apache2/conf-enabled/
 
 # Remove default VirtualHost
 RUN rm -rf /etc/apache2/sites-enabled/000-default.conf /var/www/html
